@@ -1,0 +1,10 @@
+/* Effects everything */
+body {
+    font-family: Lora, -apple-system, BlinkMacSystemFont, Segoe UI;
+}
+
+
+/* add caps lock to word/phrase */
+.toUpper {
+    text-transform: uppercase;
+}
