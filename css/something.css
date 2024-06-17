@@ -1,0 +1,48 @@
+
+/* Effects everything */
+body {
+    font-family: Lora, -apple-system, BlinkMacSystemFont, Segoe UI;
+}
+
+h1 {
+    font-size:xx-large;
+}
+
+
+/* Base styles */
+.container {
+    display: flex;
+    flex-direction: row; /* This will place the image on the left and content on the right by default */
+    /* max-height: 500px; */
+    max-height: fit-content;
+    float: none;
+  }
+  
+  .image {
+    flex: 1; /* Assigns a flex value to the image */
+    max-width: 50%;
+    max-height: auto;
+  }
+  
+  .content {
+    flex: 2; /* Assigns a larger flex value to the content area */
+    max-height: 500px;
+  }
+  
+  /* Media query for mobile devices */
+  @media (max-width: 768px) { /* Adjust max-width as needed for your specific breakpoint */
+    .container {
+      flex-direction: column; /* Stacks items vertically on mobile devices */
+
+    }
+    .image {
+        /* max-width: 100%; */
+        max-height: auto;
+    }
+  }
+
+
+/* add caps lock to word/phrase */
+.toUpper {
+    text-transform: uppercase;
+}
