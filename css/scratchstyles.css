@@ -1,12 +1,31 @@
 
+/*effects header only*/
+header {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 40%;
+    padding-right: 10%;
+    height: 70px;
+    font-size: smaller;
+}
+
 
 /* Effects everything */
 body {
     font-family: Lora, -apple-system, BlinkMacSystemFont, Segoe UI;
 }
 
+/*other general styles*/
 h1 {
     font-size:xx-large;
+    text-align: center;
+}
+
+h3 {
+    font-size: x-large;
 }
 
 img {
@@ -15,9 +34,30 @@ img {
     object-fit: contain; /*will maintain image aspect ratio*/
 }
 
- /*using the following website for reference:
- https://dev.to/drews256/ridiculously-easy-row-and-column-layouts-with-flexbox-1k01*/
+iframe {
+    
+    max-width: 75%;
+    object-fit: contain;
+}
 
+a {
+    color: #212529;
+}
+a:hover {
+    color: #0085A1;
+}
+
+footer {
+    text-align: center;
+    font-style: italic;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+ /*using the following website for two flex column ideas and page-wrapper ideas:
+ https://dev.to/drews256/ridiculously-easy-row-and-column-layouts-with-flexbox-1k01*/
+ /*Note, all of the styles on this page are still made from scratch by Jaden Taylor*/
 .page-wrapper {
     margin: 15px;
     /* background-color: red; */
@@ -41,19 +81,31 @@ img {
     padding-top: 30px;
   }
 
-  .greyRow {
-    background-color: rgb(229, 229, 229);
-  }
 
-  .whiteRow {
-    background-color: rgb(247, 250, 250);
-  }
+/*greyRow and whiteRow allows rows to alternate colors*/
+.greyRow {
+background-color: rgb(229, 229, 229);
+}
+.whiteRow {
+background-color: rgb(247, 250, 250);
+}
+
+
 /* Media query for mobile devices */
-@media (max-width: 768px) { /* Adjust max-width as needed for your specific breakpoint */
+@media (max-width: 768px) { /* Adjust max-width as needed for specific breakpoint */
+    header {
+        padding-left: 0%;
+        padding-right: 0%;
+        flex-direction: column;
+    }
+
     img {
         max-width: 100%;
     }
     
+    iframe {
+        max-width: 100%;
+    }
 
     .row {
         flex-direction: column;
@@ -65,6 +117,10 @@ img {
 }
 
 
+
+/*extra specific styles*/
+
+/*add padding to every 2nd column*/
 .leftPadding {
     padding-left: 20px;
 }
@@ -73,3 +129,5 @@ img {
 .toUpper {
     text-transform: uppercase;
 }
+
+
